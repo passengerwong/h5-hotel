@@ -21,6 +21,6 @@ module.exports = {
     ],
     "rules": {
         "vue/no-multiple-template-root": 0,
-        "no-debugger": 0
+        "no-debugger": 2
     }
 }
