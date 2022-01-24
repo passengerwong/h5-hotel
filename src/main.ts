@@ -1,6 +1,5 @@
 import { createApp } from "vue";
 import App from "./App.vue";
 
-debugger
-
+debugger;
 createApp(App).mount("#app");
