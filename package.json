@@ -7,12 +7,15 @@
     "preview": "vite preview",
     "lint": "eslint --ext .ts,.js,.vue --fix src/",
     "prettier": "prettier --write \"src/**/*.ts\" \"src/**/*.vue\"",
-    "precommit": "lint-staged --allow-empty"
+    "precommit": "lint-staged"
+  },
+  "husky": {
+    "pre-commit": "npm run precommit"
   },
   "lint-staged": {
     "src/**/*.{js,json,css,vue}": [
-      "prettier --write",
-      "eslint --fix",
+      "npm run prettier",
+      "npm run lint",
       "git add"
     ]
   },
