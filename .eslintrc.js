@@ -21,6 +21,8 @@ module.exports = {
     ],
     "rules": {
         "vue/no-multiple-template-root": 0,
-        "no-debugger": 2
+        "no-debugger": 2,
+        "@typescript-eslint/no-explicit-any": 0,
+        "vue/multi-word-component-names": 0
     }
 }
