@@ -1,0 +1,36 @@
+@imgUrl: '../assets/img';
+
+// 定义字体
+.fontLoop (@i) when (@i > 9) {
+  .f-@{i} {
+    font-size: @i + 0px;
+  }
+  .fontLoop(@i - 1)
+}
+
+.fontLoop(30);
+
+// flex
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  .flex;
+  flex-direction: column;
+}
+
+.flex--center {
+  .flex;
+  align-items: center;
+}
+
+.flex--end {
+  .flex;
+  align-items: flex-end;
+}
+
+.flex-center-center {
+  .flex--center;
+  justify-content: center;
+}

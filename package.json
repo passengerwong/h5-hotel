@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
+    "build:test": "vue-tsc --noEmit && vite build --mode test",
     "preview": "vite preview",
     "lint": "eslint --ext .ts,.js,.vue --fix src/",
     "prettier": "prettier --write \"src/**/*.ts\" \"src/**/*.vue\"",
@@ -32,11 +33,15 @@
     "@typescript-eslint/eslint-plugin": "^5.10.0",
     "@typescript-eslint/parser": "^5.10.0",
     "@vitejs/plugin-vue": "^2.0.0",
+    "autoprefixer": "^10.4.2",
     "eslint": "^8.7.0",
     "eslint-plugin-vue": "^8.3.0",
     "lint-staged": "^12.3.1",
+    "postcss-pxtorem": "^6.0.0",
     "typescript": "^4.4.4",
+    "vconsole": "^3.11.2",
     "vite": "^2.7.2",
+    "vite-plugin-vconsole": "^1.1.1",
     "vue-tsc": "^0.29.8"
   }
 }
