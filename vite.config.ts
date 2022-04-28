@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import { viteVConsole } from 'vite-plugin-vconsole';
+// import { viteVConsole } from 'vite-plugin-vconsole';
+import styleImport, { VantResolve } from 'vite-plugin-style-import';
 
 import path from 'path';
 
@@ -25,14 +26,23 @@ export default defineConfig(() => {
     },
     plugins: [
       vue(),
-      viteVConsole({
-        entry: path.resolve('./src/main.ts'),
-        localEnabled: true,
-        enabled: true,
+      styleImport({
+        resolves: [VantResolve()],
       })
+      // viteVConsole({
+      //   entry: path.resolve('./src/main.ts'),
+      //   localEnabled: true,
+      //   enabled: true,
+      // })
     ],
     server: {
-      open: true
+      open: true,
+      proxy: {
+        '/test': {
+          target: 'http://localhost:3303/test',
+          rewrite: path => path.replace(/^\/test/, '')
+        }
+      }
     }
   }
 })

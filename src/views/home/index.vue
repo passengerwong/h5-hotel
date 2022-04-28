@@ -1,15 +1,14 @@
 <template>
-  <span class="home-page"
-    >主页
-    <span class="f-30">ffff</span>
-  </span>
+  <PageLayout :title="title"> </PageLayout>
 </template>
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, ref } from "vue";
 
 export default defineComponent({
   setup() {
-    console.log("----hello");
+    const title = ref("我是首页");
+
+    return { title };
   },
 });
 </script>
